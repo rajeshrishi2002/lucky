@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Lucky Spin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="one">Chicken Rice</div>
+		<div class="two">Biriyani</div>
+		<div class="three">ice cream</div>
+		<div class="four">Orange laddu</div>
+		<div class="five">Munch</div>
+		<div class="six">lotte chocopie</div>
+	</div>
+		<span class="mid"></span>
+		<button id="spin">Spin</button>
+		<div class="stoper"></div>
+	<script src="script.js"></script>
+</body>
+<script>
+let container = document.querySelector(".container");
+let btn = document.getElementById("spin");
+let number = Math.ceil(Math.random() * 10000);
+
+let flash = document.querySelector(".container div");
+
+
+btn.onclick = function () {
+  container.style.transform = "rotate(" + number + "deg)";
+  number += Math.ceil(Math.random() * 10000);
+
+}
+  
+
+
+
+
+</script>
+</html>
